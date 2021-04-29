@@ -2,15 +2,14 @@ def bubble_sort(array)
   k = array.length
 
   loop do 
-    is_sorted = false
+    sorted = false
     (k-1).times do |i|
       if array[i] > array[i+1]
         array[i], array[i+1] = array[i+1], array[i]
         is_sorted = true
       end
     end
-
-    break if not is_sorted
+    break if not sorted
   end
   array
 end
