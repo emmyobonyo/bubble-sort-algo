@@ -1,13 +1,19 @@
 def bubble_sort(array)
-  i = 0
-  while (i < array.length-1) do
-    if array[i]>array[i+1]
-      array[i+1] = array.push([i])
+  k = array.length
+
+  loop do 
+    is_sorted = false
+    (k-1).times do |i|
+      if array[i] > array[i+1]
+        array[i], array[i+1] = array[i+1], array[i]
+        is_sorted = true
+      end
     end
-    i = i+1
+
+    break if not is_sorted
   end
-  p array
+  array
 end
 
-a = [2, 5, 3, 6, 7, 5, 4, 8, 9]
-bubble_sort(a)
+a = [5, 8, 4, 3, 8, 4, 7, 7, 5]
+p bubble_sort(a)
