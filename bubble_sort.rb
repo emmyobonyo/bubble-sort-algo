@@ -6,7 +6,7 @@ def bubble_sort(array)
     (k - 1).times do |i|
       if array[i] > array[i + 1]
         array[i], array[i + 1] = array[i + 1], array[i]
-        sorted = true
+        unsorted = true
       end
     end
     break unless unsorted
@@ -22,7 +22,7 @@ def bubble_sort_by(array)
     (k - 1).times do |i|
       if yield (array[i] > array[i + 1]) >= 0
         array[i], array[i + 1] = array[i + 1], array[i]
-        sorted = true
+        unsorted = true
       end
     end
     break unless unsorted
