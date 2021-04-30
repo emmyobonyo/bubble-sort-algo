@@ -15,12 +15,17 @@ Additional description about the project and its features.
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
 
-- [Copy this link](https://github.com/ZeenatLawal/bubble-sort)
+- [Copy this link](https://github.com/emmyobonyo/bubble-sort-algo.git)
 - Open your terminal or command line
-- Run "git clone Paste [this link](https://github.com/ZeenatLawal/bubble-sort)"
+- Run "git clone Paste [this link](https://github.com/emmyobonyo/bubble-sort-algo.git)"
 - Open the folder with your code editor
 - Create a branch to work on
-- Now You can edit the code and do a pull reques
+- Now You can edit the code and do a pull request
+
+To test the algorithm
+- Replace the values in the bubble_sort and bubble_sort_by arrays
+- Run the code "ruby bubble_sort.rb" in your termial
+- Get your results
 
 ## Authors
 
