@@ -23,7 +23,7 @@ To get a local copy up and running follow these simple example steps.
 - Now You can edit the code and do a pull request
 
 To test the algorithm
-- Replace the values in the bubble_sort and bubble_sort_by arrays
+- Replace the values in the bubble_sort and bubble_sort_by arrays at the end of the algorithm
 - Run the code "ruby bubble_sort.rb" in your termial
 - Get your results
 
