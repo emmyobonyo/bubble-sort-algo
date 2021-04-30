@@ -3,15 +3,19 @@ def bubble_sort(array)
 
   loop do
     unsorted = false
+
     (k - 1).times do |i|
-      if array[i] > array[i + 1]
-        array[i], array[i + 1] = array[i + 1], array[i]
-        unsorted = true
-      end
+      next unless array[i] > array[i + 1]
+
+      array[i], array[i + 1] = array[i + 1], array[i]
+
+      unsorted = true
     end
+
     break unless unsorted
   end
-  array
+
+  p array
 end
 
 def bubble_sort_by(array)
@@ -19,16 +23,23 @@ def bubble_sort_by(array)
 
   loop do
     unsorted = false
+
     (k - 1).times do |i|
-      if yield (array[i] > array[i + 1]) >= 0
-        array[i], array[i + 1] = array[i + 1], array[i]
-        unsorted = true
-      end
+      next unless (yield array[i], array[i + 1]) >= 0
+
+      array[i], array[i + 1] = array[i + 1], array[i]
+
+      unsorted = true
     end
+
     break unless unsorted
   end
-  array
+
+  p array
 end
 
-a = [5, 8, 4, 3, 8, 4, 7, 7, 5]
-p bubble_sort_by(a)
+bubble_sort([5, 6, 8, 2, 5, 3, 1])
+
+bubble_sort_by(%w[kitten puppies goats hi dinosaurs dogs cat]) do |left, right|
+  left.length - right.length
+end
